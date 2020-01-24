@@ -28,7 +28,7 @@
       Array.from(document.querySelectorAll('style')).forEach(item => {
         item.parentNode.removeChild(item);
       });
-      if (wrapperSelector) {
+      if (wrapperSelector && wrapperSelector.parentNode) {
         wrapperSelector.parentNode.removeChild(wrapperSelector);
       }
       document.querySelector('#hide-me').style.visibility = 'visible';
