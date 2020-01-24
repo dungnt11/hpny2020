@@ -10,7 +10,7 @@
   const secEl = document.querySelector('.seconds');
   const wrapperSelector = document.querySelector('#wrapper');
       /** >>>> */
-  setInterval(() => {
+  const process = setInterval(() => {
     const currentDate = Date.now();
     const date2020 = new Date(2020, 0, 25, 0, 0, 0, 0);
     const distance = date2020 - currentDate;
@@ -24,6 +24,7 @@
       minEl.innerHTML = minutes;
       secEl.innerHTML = seconds;
     } else {
+      clearInterval(process);
       Array.from(document.querySelectorAll('style')).forEach(item => {
         item.parentNode.removeChild(item);
       });
