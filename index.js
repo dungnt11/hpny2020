@@ -12,7 +12,7 @@
       /** >>>> */
   const process = setInterval(() => {
     const currentDate = Date.now();
-    const date2020 = new Date(2020, 0, 25, 0, 0, 0, 0);
+    const date2020 = new Date(2021, 1, 12, 0, 0, 0, 0);
     const distance = date2020 - currentDate;
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
